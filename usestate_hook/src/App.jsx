@@ -1,19 +1,19 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [theme,settheme] = useState('red')
 
   function decrementCount() {
     setCount(prevCount => prevCount - 1)
+    settheme('blue')
   } 
   function incrementCount() {
     setCount(prevCount => prevCount + 1)
+    settheme('blue')
+
   } 
-
-
   return (
     <>
      <button  onClick = {decrementCount}>
@@ -21,6 +21,7 @@ function App() {
      </button>
      <span>
       {count}
+      {theme}
      </span>
      <button onClick = {incrementCount}>
       +
